@@ -293,10 +293,10 @@
 </script>
 
 <script>
-  fetch('https://ipinfo.io/json?token=7cfd1c0d2d5d0e') // token público grátis
+  fetch("https://api.db-ip.com/v2/free/self")
     .then(res => res.json())
     .then(data => {
-      document.getElementById('ip-address').textContent = `Seu endereço IP é: ${data.ip}`;
+      document.getElementById('ip-address').textContent = `Seu endereço IP é: ${data.ipAddress}`;
     })
     .catch(() => {
       document.getElementById('ip-address').textContent = 'Não foi possível obter o IP.';
