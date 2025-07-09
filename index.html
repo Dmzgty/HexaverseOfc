@@ -305,16 +305,13 @@
 
 
 <script>
-  // Conta e mostra acessos usando CountAPI
-  fetch('https://api.countapi.xyz/hit/letrinhas-neon/site-visits')
+  fetch('https://ipinfo.io/json?token=7cfd1c0d2d5d0e') // token público grátis
     .then(res => res.json())
     .then(data => {
-      document.getElementById('contador').textContent =
-        `Este site já foi acessado ${data.value} vezes.`;
+      document.getElementById('ip-address').textContent = `Seu endereço IP é: ${data.ip}`;
     })
     .catch(() => {
-      document.getElementById('contador').textContent =
-        'Não foi possível carregar o número de acessos.';
+      document.getElementById('ip-address').textContent = 'Não foi possível obter o IP.';
     });
 </script>
 
