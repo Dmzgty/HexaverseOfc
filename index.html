@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121212">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title class="titulo">NEXUS REST API'S 2025</title>
+<link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
+<meta class="desc" name="description" content="A Nexus APIs é a plataforma ideal para desenvolvedores que buscam integração rápida, segura e eficiente. Oferecemos uma ampla variedade de APIs para facilitar a automação, análise de dados e comunicação em diversos projetos. Simples, potente e sempre disponível. Explore agora e leve suas aplicações a um novo nível!">
+<meta property="og:image" content="https://nexus-api.shop/i4gus0.jpg">
+<link rel="stylesheet" href="css/styleo.css">
+</head>
+<body>
+  <div class="header">
+    <button class="menu-toggle" id="toggleSidebar">
+      <i class="mdi mdi-format-list-bulleted"></i>
+    </button>
+    <span class="menu-title">Home</span>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <ul class="nav flex-column">
+  <li class="nav-item menu-items">
+    <a class="nav-link" href="/login">
+      <span class="menu-icon">
+        <i class="mdi mdi-account-cog" style="font-size: 20px; color: white;"></i> 
+      </span>
+      <span class="menu-title">ADMINS</span>
+    </a>
+  </li>
+
+<li class="nav-item menu-items">
+    <a class="nav-link" href="/creditos">
+      <span class="menu-icon">
+        <i class="mdi mdi-account-hard-hat" style="font-size: 20px; color: white;"></i> 
+      </span>
+      <span class="menu-title">CREDITOS</span>
+    </a>
+  </li>
+  
+  <li class="nav-item menu-items">
+    <a class="nav-link" href="/comprar-key">
+      <span class="menu-icon">
+        <i class="mdi mdi-store" style="font-size: 20px; color: white;"></i> 
+      </span>
+      <span class="menu-title">COMPRAR</span>
+    </a>
+  </li>
+  
+  <li class="nav-item menu-items">
+    <a class="nav-link" href="/bots">
+      <span class="menu-icon">
+        <i class="mdi mdi-robot" style="font-size: 20px; color: white;"></i> 
+      </span>
+      <span class="menu-title">BOTS FREE</span>
+    </a>
+  </li>
+
+  <li class="nav-item nav-category">
+    <span class="nav-link" style="padding-left: 0.5rem; font-size: 0.95rem;">Menus de Apis abaixo</span>
+  </li>
+
+  <li class="nav-item menu-items">
+    <a class="nav-link" data-toggle="collapse" href="#ui-help" aria-expanded="false" aria-controls="ui-help">
+      <span class="menu-icon">
+        <i class="mdi mdi-help-circle" style="font-size: 20px; color: white;"></i>
+      </span>
+   <span class="menu-title">SUPORTE</span>
+ <i class="menu-arrow mdi mdi-chevron-down"></i>
+    </a>
+    <div class="collapse" id="ui-help" style="display: none;">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.me/5588992153207?text=Quero%20uma%20ajuda%20no%20site">HELP ME</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <!-- GERADORES abaixo daqui -->
+  <li class="nav-item menu-items">
+  <a class="nav-link" data-toggle="collapse" href="#ui-geradores" aria-expanded="false" aria-controls="ui-geradores">
+    <span class="menu-icon">
+      <i class="mdi mdi-database" style="font-size: 20px; color: white;"></i>
+    </span>
+ <span class="menu-title">GERADORES</span>
+ <i class="menu-arrow mdi mdi-chevron-down"></i>
+  </a>
+  <div class="collapse" id="ui-geradores" style="display: none;">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"><a class="nav-link" href="/gerar/cpf?apikey=SuaApiKey">GERAR CPF</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/cnpj?apikey=SuaApiKey">GERAR CNPJ</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/placa?apikey=SuaApiKey">GERAR PLACA</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/rg?apikey=SuaApiKey">GERAR RG</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/titulo-eleitor?apikey=SuaApiKey">GERAR TITULO DE ELEITOR</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/data-nascimento?apikey=SuaApiKey">GERAR DATA DE NASCIMENTO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/telefone?apikey=SuaApiKey">GERAR TELEFONE</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/cartao-credito?apikey=SuaApiKey">GERAR CART?O DE CREDITO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/email?apikey=SuaApiKey">GERAR E-MAIL</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/endereco?apikey=SuaApiKey">GERAR ENDERE?O</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/nick?apikey=SuaApiKey">GERAR NICK</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/senha?apikey=SuaApiKey">GERAR SENHA</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/nome-completo?apikey=SuaApiKey">GERAR NOME COMPLETO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/numero-aleatorio?apikey=SuaApiKey">GERAR NUMERO ALEATORIO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/genero?apikey=SuaApiKey">GERAR GENERO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/estado-civil?apikey=SuaApiKey">GERAR ESTADO CIVIL</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/profissao?apikey=SuaApiKey">GERAR PROFISS?O</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/altura?apikey=SuaApiKey">GERAR ALTURA</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/peso?apikey=SuaApiKey">GERAR PESO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/tipo-sanguineo?apikey=SuaApiKey">GERAR TIPO SANGUINEO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/pais?apikey=SuaApiKey">GERAR PAIS</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/estado?apikey=SuaApiKey">GERAR ESTADO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/cidade?apikey=SuaApiKey">GERAR CIDADE</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/cep?apikey=SuaApiKey">GERAR CEP</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/usuario?apikey=SuaApiKey">GERAR USUARIO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/url?apikey=SuaApiKey">GERAR URL</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/codigo-barras?apikey=SuaApiKey">GERAR CODIGO DE BARRAS</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/numero-registro?apikey=SuaApiKey">GERAR NUMERO DE REGISTRO</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/id?">GERAR ID</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerar/codigo-verificacao?apikey=SuaApiKey">GERAR CODIGO DE VERIFICACAO</a></li>
+    </ul>
+  </div>
+</li>
+
+<!-- GERADORES PRO abaixo daqui -->
+<li class="nav-item menu-items">
+  <a class="nav-link" data-toggle="collapse" href="#ui-geradores-pro" aria-expanded="false" aria-controls="ui-geradores-pro">
+    <span class="menu-icon">
+      <i class="mdi mdi-flash" style="font-size: 20px; color: white;"></i>
+    </span>
+<span class="menu-title">GRDR - PRO</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+  </a>
+  <div class="collapse" id="ui-geradores-pro" style="display: none;">
+    <ul class="nav flex-column sub-menu">
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/cpf?query=10&apikey=SuaApiKey">GERAR CPFs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/cnpj?query=10&apikey=SuaApiKey">GERAR CNPJs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/rg?query=10&apikey=SuaApiKey">GERAR RGs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/cep?query=10&apikey=SuaApiKey">GERAR CEPs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/numeros?query=10&apikey=SuaApiKey">GERAR Numeros</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/uuid?query=10&apikey=SuaApiKey">GERAR UUIDs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/data?query=10&apikey=SuaApiKey">GERAR DATAs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/nome?query=10&apikey=SuaApiKey">GERAR NOMEs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/email?query=10&apikey=SuaApiKey">GERAR E-MAILs</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gerarpro/telefone?query=10&apikey=SuaApiKey">GERAR TELEFONEs</a></li>
+    </ul>
+  </div>
+</li>
+
+<!-- FILTROS abaixo daqui -->
+<li class="nav-item menu-items">
+  <a class="nav-link" data-toggle="collapse" href="#ui-geradores-pro4" aria-expanded="false" aria-controls="ui-geradores-pro4">
+    <span class="menu-icon">
+      <i class="mdi mdi-image-filter-vintage" style="font-size: 20px; color: white;"></i>
+    </span>
+ <span class="menu-title">FILTROS</span>
+ <i class="menu-arrow mdi mdi-chevron-down"></i>
+  </a>
+  <div class="collapse" id="ui-geradores-pro4" style="display: none;">
+    <ul class="nav flex-column sub-menu">
+ 
+      <li class="nav-item"><a class="nav-link" href="/filtro/blur?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">BLUR</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/grayscale?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">GRAYSCALE</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/invert?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">INVERT</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/sepia?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">SEPIA</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/brightness?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">BRIGHTNESS</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/contrast?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">CONTRAST</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/saturate?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">SATURATE</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/hue-rotate?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">HUE ROTATE</a></li>
+      <li class="nav-item"><a class="nav-link" href="/filtro/opacity?img=https://telegra.ph/file/e1a4c87ec98b8f14d99b5.jpg&apikey=SuaApiKey">OPACITY</a></li>
+    </ul>
+  </div>
+</li>
+ 
+<!-- DOWNLOADS abaixo daqui --> 
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-downloads" aria-expanded="false" aria-controls="ui-nome">
+<span class="menu-icon">
+<i class="mdi mdi-download" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">DOWNLOADS</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-downloads" style="display: none;">
+<ul class="nav flex-column sub-menu"> 
+     <!-- DOWNLOADS-APIS -->
+<li class="nav-item"> <a class="nav-link"href="/youtube/play?query=matue%201993&apikey=SuaApiKey">YOUTUBE PLAY</a>
+<li class="nav-item"> <a class="nav-link"href="/youtube/play2?query=matue%201993&apikey=SuaApiKey">YOUTUBE PLAY 2</a>
+<li class="nav-item"> <a class="nav-link"href="/youtube/search?query=teto">YT SEARCH</a>
+<li class="nav-item"> <a class="nav-link"href="/youtube/mp4?url=https://youtube.com/watch?v=rGHJ0mqean4&apikey=SuaApiKey">YOUTUBE MP4</a>
+<li class="nav-item"> <a class="nav-link"href="/youtube/mp3?url=https://youtube.com/watch?v=rGHJ0mqean4&apikey=SuaApiKey">YOUTUBE MP3</a>
+<li class="nav-item"> <a class="nav-link"href="/api/instagram?url=https://www.instagram.com/reel/DFw8J_kq7GF/?igsh=MWZ3cHJlZ3cyMXc2eg==&apikey=SuaApiKey">INSTA VIDEO</a>
+<li class="nav-item"> <a class="nav-link"href="/tiktok/video?url=https://vm.tiktok.com/ZMBhXW7gQ/&apikey=SuaApiKey">TIKTOK DL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/pinvideo?url=https://pin.it/6cdJp0mWq&apikey=SuaApiKey">PIN VIDEO</a></li>
+<li class="nav-item"> <a class="nav-link"href="/api/facebook?url=https://www.facebook.com/share/r/15m7vWNxTx/&apikey=SuaApiKey">FACEBOOK</a>
+<li class="nav-item"> <a class="nav-link"href="/api/kwai?url=https://kwai-video.com/p/q0fr2CRm&apikey=SuaApiKey">KWAI VIDEO </a>
+</ul>
+</div>
+</li>
+
+<!-- IMAGENS - PLAQUINHAS -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-montagem" aria-expanded="false" aria-controls="ui-url">
+<span class="menu-icon">
+<i class="mdi mdi-palette" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">PICTURES</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-montagem" style="display: none;">
+<ul class="nav flex-column sub-menu">     
+  
+
+    <!--MONTAGEM - EFEITOS -->
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq?texto=yato&apikey=SuaApiKey">PLAQ</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq1?texto=yato&apikey=SuaApiKey">PLAQ 1</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq2?texto=yato&apikey=SuaApiKey">PLAQ 2</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq3?texto=yato&apikey=SuaApiKey">PLAQ 3</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq4?texto=yato&apikey=SuaApiKey">PLAQ 4</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq5?texto=yato&apikey=SuaApiKey">PLAQ 5</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq6?texto=yato&apikey=SuaApiKey">PLAQ 6</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq7?texto=yato&apikey=SuaApiKey">PLAQ 7</a></li>
+	<li class="nav-item"> <a class="nav-link" href="/api/plaq8?texto=yato&apikey=SuaApiKey">PLAQ 8</a></li>
+</ul>
+</div>
+</li>
+
+<!--LOGOS - ANIMES -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-randkm" aria-expanded="false" aria-controls="ui-importante">
+<span class="menu-icon">
+<i class="mdi mdi-directions-fork" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">ANIMES</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-randkm" style="display: none;">
+<ul class="nav flex-column sub-menu">     
+
+
+       <!-- RANDOM -->
+<li class="nav-item"> <a class="nav-link" href="/random/wallpaperanime?apikey=SuaApiKey">WALLPAPER ANIME </a></li>     
+<li class="nav-item"> <a class="nav-link" href="/random/metadinha?apikey=SuaApiKey">METADINHA </a></li>      
+<li class="nav-item"> <a class="nav-link" href="/random/cosplay?apikey=SuaApiKey">RANDOM COSPLAY </a></li>       
+<li class="nav-item"> <a class="nav-link" href="/random/waifu?apikey=SuaApiKey">RANDOM WAIFU </a></li>       
+<li class="nav-item"> <a class="nav-link" href="/random/waifu2?apikey=SuaApiKey">RANDOM WAIFU 2 </a></li>      
+ <li class="nav-item"> <a class="nav-link" href="/random/loli?apikey=SuaApiKey">RANDOM LOLI </a></li>    
+  <li class="nav-item"> <a class="nav-link" href="/random/shota?apikey=SuaApiKey">RANDOM SHOTA </a></li>    
+  <li class="nav-item"> <a class="nav-link" href="/random/yotsuba?apikey=SuaApiKey">RANDOM YOTSUBA </a></li>        
+  <li class="nav-item"> <a class="nav-link" href="/random/shinomiya?apikey=SuaApiKey">RANDOM SHINOMIYA </a></li>   
+    <li class="nav-item"> <a class="nav-link" href="/random/yumeko?apikey=SuaApiKey">RANDOM YUMEKO </a></li>    
+        <li class="nav-item"> <a class="nav-link" href="/random/tejina?apikey=SuaApiKey">RANDOM TEJINA </a></li>        
+        <li class="nav-item"> <a class="nav-link" href="/random/chiho?apikey=SuaApiKey">RANDOM CHIHO </a></li>      
+        <li class="nav-item"> <a class="nav-link" href="/random/boruto?apikey=SuaApiKey">RANDOM BORUTO </a></li>       
+                <li class="nav-item"> <a class="nav-link" href="/random/kaori?apikey=SuaApiKey">RANDOM KAORI </a></li>   
+               <li class="nav-item"> <a class="nav-link" href="/random/shizuka?apikey=SuaApiKey">RANDOM SHIZUKA </a></li>     
+                      <li class="nav-item"> <a class="nav-link" href="/random/kaga?apikey=SuaApiKey">RANDOM KAGA </a></li>     
+                      <li class="nav-item"> <a class="nav-link" href="/random/kotori?apikey=SuaApiKey">RANDOM KOTORI </a></li>     
+                      <li class="nav-item"> <a class="nav-link" href="/random/mikasa?apikey=SuaApiKey">RANDOM MIKASA </a></li>                                 <li class="nav-item"> <a class="nav-link" href="/random/akiyama?apikey=SuaApiKey">RANDOM AKIYAMA </a></li>
+                                      <li class="nav-item"> <a class="nav-link" href="/random/gremory?apikey=SuaApiKey">RANDOM GREMORY </a></li>                     
+                                      <li class="nav-item"> <a class="nav-link" href="/random/isuzu?apikey=SuaApiKey">RANDOM IZUKU </a></li>                                               <li class="nav-item"> <a class="nav-link" href="/random/shina?apikey=SuaApiKey">RANDOM SHINA </a></li>        
+<li class="nav-item"> <a class="nav-link" href="/random/kagura?apikey=SuaApiKey">RANDOM KAGURA </a></li>                                <li class="nav-item"> <a class="nav-link" href="/random/shinka?apikey=SuaApiKey">RANDOM SHINKA </a></li>                                                           <li class="nav-item"> <a class="nav-link" href="/random/eba?apikey=SuaApiKey">RANDOM EBA </a></li>                 
+                          <li class="nav-item"> <a class="nav-link" href="/random/yuri?apikey=SuaApiKey">RANDOM YURI </a></li>              
+                               <li class="nav-item"> <a class="nav-link" href="/random/erza?apikey=SuaApiKey">RANDOM ERZA </a></li>                                                         
+<li class="nav-item"> <a class="nav-link" href="/random/elaina?apikey=SuaApiKey">RANDOM ELAINA </a></li> 
+                               <li class="nav-item"> <a class="nav-link" href="/random/hinata?apikey=SuaApiKey">RANDOM HINATA </a></li>                                    <li class="nav-item"> <a class="nav-link" href="/random/naruto?apikey=SuaApiKey">RANDOM NARUTO </a></li>
+                               <li class="nav-item"> <a class="nav-link" href="/random/minato?apikey=SuaApiKey">RANDOM MINATO </a></li> 
+<li class="nav-item"> <a class="nav-link" href="/random/sagari?apikey=SuaApiKey">RANDOM SAGARI </a></li>      
+<li class="nav-item"> <a class="nav-link" href="/random/nezuko?apikey=SuaApiKey">RANDOM NEZUKO </a></li>                  
+                    <li class="nav-item"> <a class="nav-link" href="/random/rize?apikey=SuaApiKey">RANDOM RIZE </a></li>         
+                    <li class="nav-item"> <a class="nav-link" href="/random/anna?apikey=SuaApiKey">RANDOM ANNA </a></li>                                 
+                                  <li class="nav-item"> <a class="nav-link" href="/random/deidara?apikey=SuaApiKey">RANDOM ANNA </a></li>                                      
+                        <li class="nav-item"> <a class="nav-link" href="/random/deidara?apikey=SuaApiKey">RANDOM DEIDARA </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="/random/asuna?apikey=SuaApiKey">RANDOM ASUNA </a></li>    
+                        <li class="nav-item"> <a class="nav-link" href="/random/ayuzawa?apikey=SuaApiKey">RANDOM AYUZAWA </a></li>                                                                               <li class="nav-item"> <a class="nav-link" href="/random/emilia?apikey=SuaApiKey">RANDOM EMILIA </a></li>                             
+                                                <li class="nav-item"> <a class="nav-link" href="/random/chitoge?apikey=SuaApiKey">RANDOM CHITOGE </a></li>                                                                                <li class="nav-item"> <a class="nav-link" href="/random/hestia?apikey=SuaApiKey">RANDOM HESTIA </a></li> 
+<li class="nav-item"> <a class="nav-link" href="/random/inori?apikey=SuaApiKey">RANDOM INORI </a></li>   
+<li class="nav-item"> <a class="nav-link" href="/random/itachi?apikey=SuaApiKey">RANDOM ITACHI </a></li>                                  
+<li class="nav-item"> <a class="nav-link" href="/random/madara?apikey=SuaApiKey">RANDOM MADARA </a></li>                                <li class="nav-item"> <a class="nav-link" href="/random/sakura?apikey=SuaApiKey">RANDOM SAKURA </a></li>                                   
+<li class="nav-item"> <a class="nav-link" href="/random/sasuke?apikey=SuaApiKey">RANDOM SASUKE </a></li>
+<li class="nav-item"> <a class="nav-link" href="/random/tsunade?apikey=SuaApiKey">RANDOM TSUNADE </a></li>                               
+<li class="nav-item"> <a class="nav-link" href="/random/onepiece?apikey=SuaApiKey">RANDOM ONEPIECE </a></li>     
+<li class="nav-item"> <a class="nav-link" href="/random/mobil?apikey=SuaApiKey">RANDOM MOBIL </a></li>              
+<li class="nav-item"> <a class="nav-link" href="/random/montor?apikey=SuaApiKey">RANDOM MONTOR </a></li>    
+<li class="nav-item"> <a class="nav-link" href="/random/keneki?apikey=SuaApiKey">RANDOM KENEKI </a></li>    
+<li class="nav-item"> <a class="nav-link" href="/random/megumin?apikey=SuaApiKey">RANDOM MEGUMIN </a></li>    
+<li class="nav-item"> <a class="nav-link" href="/random/toukachan?apikey=SuaApiKey">RANDOM TOUKACHAN </a></li>   
+</ul>
+</div>
+</li> 
+
+<!--PESQUISAS - DOWNLOADS -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-pesquisas" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-magnify" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">PESQUISAS</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-pesquisas" style="display: none;">
+<ul class="nav flex-column sub-menu"> 
+  
+    <!--PARTE DE PESQUISAS -->
+<li class="nav-item"> <a class="nav-link" href="/api/xnxxsearch?q=novinha&apikey=SuaApiKey">XNXX SEARCH </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/xvideossearch?q=novinha&apikey=SuaApiKey">XVIDEOS SEARCH </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/pornhubsearch?q=novinha&apikey=SuaApiKey==${apikey}">PORNHUB SEARCH </a></li>
+<li class="nav-item"> <a class="nav-link"href="/youtube/search?query=teto&apikey=SuaApiKey">YTB-PESQUISA</a>
+<li class="nav-item"> <a class="nav-link" href="/api/pinterest?q=gato&apikey=SuaApiKey">IMG PINTEREST </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/gimage?txt=cachorro&apikey=SuaApiKey">GOOGLE IMAGE </a></li>
+<li class="nav-item"> <a class="nav-link" href="/stalk/instagram?username=euyato&apikey=SuaApiKey">STALK INSTAGRAM </a></li>
+<li class="nav-item"> <a class="nav-link" href="/stalk/tiktok?username=neymarjr&apikey=SuaApiKey">STALK TIKTOK </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/googlesrc&query=m.scheyot&apikey=SuaApiKey">PESQUISA GOOGLE </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/playstore?nome=whatsapp&apikey=SuaApiKey">PLAY-STORE </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/horoscopo?signo=aries&apikey=SuaApiKey">HOR?SCOPO </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/noticias/globo?apikey=SuaApiKey">G1 - NOTICIA GLOBO </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/noticias/poder360?apikey=SuaApiKey">NOTICIA PODER360 </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/noticias/jovempan?apikey=SuaApiKey">NOTICIA JOVPAN </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/noticias/uol?apikey=SuaApiKey">NOTICIAS UOL </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/noticias/estadao?apikey=SuaApiKey">NOTICIA ESTADAO </a></li>
+</ul>
+</div>
+</li> 
+
+<!--CONTAS - FREE -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-contas" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-account" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">ACCOUNTS</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-contas" style="display: none;">
+<ul class="nav flex-column sub-menu"> 
+   <li class="nav-item"> <a class="nav-link" href="/outros/disney?apikey=SuaApiKey">DISNEY</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/netflix?apikey=SuaApiKey">NETFLIX</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/hbomax?apikey=SuaApiKey">HBO MAX</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/deezer?apikey=SuaApiKey">DEEZER MUSIC</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/star?apikey=SuaApiKey">STAR PLUS</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/paramount?apikey=SuaApiKey">PARAMOUNT</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/nordvpn?apikey=SuaApiKey">NORD VPN</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/crunchyroll?apikey=SuaApiKey">CRUNCHY ROLL</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/ufc?apikey=SuaApiKey">UFC SPORTS</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/express?apikey=SuaApiKey">EXPRESS VPN</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/credlink?apikey=SuaApiKey">CREDLINK</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/sp-pni?apikey=SuaApiKey">SP PNI</a></li>
+   <li class="nav-item"> <a class="nav-link" href="/outros/pmrj?apikey=SuaApiKey">PM RJ</a></li>
+</ul>
+</div>
+</li>
+
+  <!-- IAS GPTs permanece abaixo daqui -->
+  <li class="nav-item menu-items">
+    <a class="nav-link" data-toggle="collapse" href="#ui-ias" aria-expanded="false" aria-controls="ui-ias">
+      <span class="menu-icon">
+        <i class="mdi mdi-brain" style="font-size: 20px; color: white;"></i>
+      </span>
+      <span class="menu-title">IAS GPTS</span>
+      <i class="menu-arrow mdi mdi-chevron-down"></i>
+    </a>
+    <div class="collapse" id="ui-ias" style="display: none;">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item"><a class="nav-link" href="/api/gemini?q=javascript&apikey=SuaApiKey">GEMINI PESQUISA</a></li>
+        <li class="nav-item"><a class="nav-link" href="/ias/bing?pesquisa=javascript&apikey=SuaApiKey">BING IA TEXT</a></li>
+        <li class="nav-item"><a class="nav-link" href="/api/wikipedia?q=javascript&apikey=SuaApiKey">WIKIPEDIA TEXT</a></li>
+      </ul>
+    </div>
+  </li>
+
+<!--STICKERS - FIGU -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-stk" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-tag" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">STICKERS</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-stk" style="display: none;">
+<ul class="nav flex-column sub-menu"> 
+
+<li class="nav-item"> <a class="nav-link" href="/api/attp?texto=yatomods&apikey=SuaApiKey">ATTP TEXTO</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/sticker-meme?apikey=SuaApiKey">FIGU ALEATORIO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-engracada?apikey=SuaApiKey">FIGU ENGRACADA</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/sticker-roblox?apikey=SuaApiKey">FIGU ROBLOX</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-comum?apikey=SuaApiKey">FIGU COMUM</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-raiva?apikey=SuaApiKey">FIGU RAIVA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-animais?apikey=SuaApiKey">FIGU ANIMAIS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-desenho?apikey=SuaApiKey">FIGU DESENHO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-bebe?apikey=SuaApiKey">FIGU BEBE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-emoji?apikey=SuaApiKey">FIGU EMOJI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-coreana?apikey=SuaApiKey">FIGU COREANA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-anime?apikey=SuaApiKey">FIGU ANIME</a></li>
+<li class="nav-item"> <a class="nav-link" href="/sticker-flork?apikey=SuaApiKey">FIGU FLORK</a></li>
+</ul>
+</div>
+</li> 
+
+ <!--PORNO - APIS -->               
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-porno" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-emoticon-devil" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">APIS +18</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-porno" style="display: none;">
+<ul class="nav flex-column sub-menu"> 
+  
+    <!--PARTE DE NSFW -->   
+     <li class="nav-item"> <a class="nav-link"href="/api/pornogratis?q=orgasmo&apikey=SuaApiKey">PORNO GRATIS</a></li>  
+</ul>
+</div>
+</li> 
+
+<!--OUTRAS - APIS -->
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-funcoes" aria-expanded="false" aria-controls="ui-importante">
+<span class="menu-icon">
+<i class="mdi mdi-dots-horizontal-circle" style="font-size: 20px; color: white;"></i>
+</span>
+<span class="menu-title">OTHERS</span>
+<i class="menu-arrow mdi mdi-chevron-down"></i>
+</a>
+<div class="collapse" id="ui-funcoes" style="display: none;">
+<ul class="nav flex-column sub-menu">     
+
+
+       <!-- FUNÇÕES -->
+<li class="nav-item"><a class="nav-link" href="/api/criarqr?texto=yato&apikey=SuaApiKey">CRIAR QRCODE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/ping?fundo=https://nexus-api.shop/ot2xj7.jpg&text1=Nexus&text2=0.999&text3=%3E%3E%20SPEED%20BOT%20%3C%3C&avatar=https://nexus-api.shop/xtxa26.jpg">PING UP </a></li>
+<li class="nav-item"> <a class="nav-link" href="/api/fazernick?nome=yato&apikey=SuaApiKey">GERAR NICK </a></li>
+</ul>
+</div>
+
+</ul>
+</div>
+
+  <main class="main-content">
+  <div class="custom-gradient-card">
+      <div class="card-body text-center">
+        <h5 class="font-weight-bold text-info text-uppercase">INFORMAÇÕES IP:</h5>
+        <i class="mdi mdi-web-check" style="font-size: 2.5rem; color: purple"></i>
+        <div style="margin-top: 10px;">
+          <h3 id="user-ip" style="margin: 0;">
+        </div>
+      </div>
+    </div>
+    
+<script>
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('user-ip').textContent = data.ip;
+    })
+    .catch(error => {
+      console.error('Erro ao obter IP:', error);
+      document.getElementById('user-ip').textContent = 'IP não disponível';
+    });
+</script>
+  
+   <div class="custom-gradient-card">
+  <div class="card-body">
+    <h5 class="font-weight-bold text-danger text-uppercase">VERIFICAÇÃO DE APIKEYS:</h5>
+    <span class="mdi mdi-shield-key" style="font-size: 2.5rem; color: purple"></span>
+    <div class="row">
+      <div class="col-9">
+        <div class="d-flex flex-column align-items-center align-self-start mt-1 mb-2">
+          <input
+            class="form-control font-weight-bold text-center"
+            type="text"
+            id="requestin"
+            placeholder="INSIRA SUA APIKEY"
+            style="font-size: 0.9rem; width: 100%; padding: 0.4rem; border-radius: 10px; border: none;"
+          >
+          <button id="reque"
+            onclick="verificar()"
+            class="mt-3"
+            style="background: purple; color: white; border: none; padding: 0.45rem 1rem; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+            VERIFICAR APIKEY
+          </button>
+        </div>
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+        <div class="icon icon-box-success">
+          <!-- Ícone aqui se quiser -->
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+       </main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  const toggleBtn = document.getElementById('toggleSidebar');
+  const sidebar = document.getElementById('sidebar');
+
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  document.querySelectorAll('[data-toggle="collapse"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      const expanded = link.getAttribute("aria-expanded") === "true";
+      link.setAttribute("aria-expanded", String(!expanded));
+      target.style.display = expanded ? "none" : "block";
+    });
+  });
+
+  function verificar() {
+        var apikeyrq = document.getElementById("requestin").value;
+        
+        // Fazendo a solicitação para /runtime?apikey=SuaApiKey
+       
+        fetch(`/api/keyerrada/?apikey=${apikeyrq}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar a APIKEY');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Exibindo as informações recebidas em formato JSON usando o SweetAlert
+                if (JSON.stringify(data.key).includes("�??")) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'APIKEY 100% ATIVA',
+                    text: `REQUEST�??: ${JSON.stringify(data.request)}
+APIKEY�??: ${JSON.stringify(data.apikey)}`,
+                    html: JSON.stringify(data.key)
+                });
+            
+            } else {
+            	    Swal.fire({
+                    icon: 'success',
+                    title: 'RESULTADO:',
+                    text: `ERROR�??: Sua apikey ou está desativada ou está sem request`,
+                    html: JSON.stringify(data.key)
+                });
+            	}
+            })
+            .catch(error => {
+                // Exibindo mensagem de erro em caso de falha na solicitação
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro',
+                    text: `Error, não foi possivel verificar. falem com criador`
+                });
+            });
+    }
+</script>
+<audio src="https://files.catbox.moe/h7qi1l.mp3" autoplay loop></audio>
+</body>
+</html>
